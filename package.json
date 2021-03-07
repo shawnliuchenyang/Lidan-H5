@@ -25,6 +25,7 @@
     "react": "16.13.1",
     "react-calendar": "^3.3.1",
     "react-dom": "^16.8.6",
+    "react-helmet": "^6.1.0",
     "reactjs-swiper": "^0.1.0",
     "wangeditor": "^4.6.6",
     "xlsx": "^0.16.4"
@@ -34,6 +35,7 @@
     "@types/qs": "^6.9.3",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
+    "@types/react-helmet": "^6.1.0",
     "@types/react-test-renderer": "^16.0.3",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.4.0",

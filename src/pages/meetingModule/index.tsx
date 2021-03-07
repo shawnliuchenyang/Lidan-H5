@@ -4,12 +4,11 @@ import { Button, Table, Input, Select, Modal, message, Radio, Spin, DatePicker, 
 import router from 'umi/router';
 import { getMeeingInfo } from '@/service/meetingCenter'
 import LO from "lodash"
+import {Helmet} from "react-helmet";
 
 const MeettingCenter: FC = (props) => {
-
-  const [form] = Form.useForm();
   const [moduleInfo, setmoduleInfo] = useState([]);
-  const [swiperItems, setswiperItems] = useState([]);
+  const [meetingInfo, setmeetingInfo] = useState([]);
 
   useEffect(() => {
     getList()
@@ -23,7 +22,7 @@ const MeettingCenter: FC = (props) => {
         meetingId:query.conference_id
       })
       if(res.returncode === 0){
-        console.log(res.result)
+        setmeetingInfo(res.result)
         const expandInfo = LO.get(res, "result.expandInfo",[])
         setmoduleInfo(expandInfo[query.index])
         }
@@ -52,6 +51,10 @@ const MeettingCenter: FC = (props) => {
 
     return (
       <div className={styles.container}>
+        <Helmet>
+          <meta charSet="utf-8" />
+            <title>{LO.get(meetingInfo, "baseInfo.meetingName", "")}</title>
+        </Helmet>
         <div className={styles.body}>
         <div dangerouslySetInnerHTML={{__html: moduleInfo.modelData}}></div>
         </div>

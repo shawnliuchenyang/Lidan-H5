@@ -49,7 +49,7 @@ const config: IConfig =  {
       dva: true,
       dynamicImport: false,
       dll: false,
-      title: true,
+      title: false,
       links: [
         { rel: 'icon', href: 'https://cdn.wul.ai/file-analyze/logo.png' },
       ],
@@ -75,6 +75,7 @@ proxy: {
       logLevel: 'debug',
   },
 },
+
   theme: {
     "@primary-blue": "#1f77f3",
     "@white": "#fff",

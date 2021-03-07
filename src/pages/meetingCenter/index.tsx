@@ -4,12 +4,10 @@ import { Button, Table, Input, Select, Modal, message, Radio, Spin, DatePicker, 
 import router from 'umi/router';
 import { getMeeingInfo } from '@/service/meetingCenter'
 import ReactSwiper from 'reactjs-swiper';
+import { Helmet } from "react-helmet";
 import {
   HomeOutlined,
 } from '@ant-design/icons';
-
-
-
 import LO from "lodash"
 
 const MeettingCenter: FC = (props) => {
@@ -143,12 +141,16 @@ const MeettingCenter: FC = (props) => {
 
     return (
       <div className={styles.container}>
+        <Helmet>
+          <meta charSet="utf-8" />
+            <title>{LO.get(meetingInfo, "baseInfo.meetingName", "")}</title>
+        </Helmet>
         <div className={styles.body}>
           {renderTitle()}
           {renderSwiper()}
           {renderModules()}
         </div>
-        {renderFooter()}
+        {/* {renderFooter()} */}
       </div>
     )
 }
