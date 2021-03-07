@@ -1,0 +1,51 @@
+@nav-width: 280px;
+
+.titleBar {
+  position: absolute;
+  height:100px;
+  top: 0;
+  background-color: gray;
+  width:100%;
+}
+
+.calendar {
+  width: 600px;
+  box-shadow: 0 2px 4px #8E9CA8;
+}
+
+.title {
+  height: 50px;
+  padding: 4px 8px;
+  background-color: #F5F7FE;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.calendarIcon {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  background-color: @primary-blue;
+  height: 16px;
+  width: 5px;
+  margin-right: 8px;
+}
+
+.itemContent {
+  color: #8E9CA8;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.meetingContent {
+  color: red;
+}
+
+:global {
+  .react-calendar {
+    width: 100% !important;
+    border: none !important;
+    padding: 0 0 16px 0;
+  }
+}
+

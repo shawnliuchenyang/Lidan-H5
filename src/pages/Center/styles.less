@@ -1,0 +1,65 @@
+.container {
+  height: 100%;
+  overflow: auto;
+  :global {
+    a:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    .ant-select {
+      width: 100%;
+    }
+    .ant-picker {
+      width: 100% !important
+    }
+   } 
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  height: 64px;
+  padding-left: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px #eceef0;
+  display: flex;
+  color: #425b6d;
+  line-height: 64px;
+}
+
+.body {
+  background-color: @background-gray;
+  height: 100%;
+  padding: 24px 24px 56px 24px;
+  overflow-y: auto;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+
+.textField {
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 24px;
+}
+
+p {
+  margin: 4px;
+  color: #000;
+}
+
+.order {
+  color: #687c8a;
+  margin-bottom: 16px;
+}
+
+.notice {
+  color: #425b6d;
+  font-size: 16px;
+  margin: 36px 0 18px 0;
+  font-weight: 500;
+}

@@ -1,0 +1,198 @@
+@nav-width: 280px;
+
+.nav {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: @nav-width;
+  display: flex;
+  flex-direction: column;
+  background: @uibot-blue;
+  color: @white;
+}
+
+.title {
+  height: 80px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 80px;
+  padding-left:24px;
+  color: rgba(255,255,255,.9)
+}
+
+:global{
+    .ant-menu {
+    height: 100%;
+  }
+
+  .ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
+    background: @uibot-blue;
+  }
+}
+
+@nav-width: 280px;
+
+.nav {
+  z-index: 3;
+  height: 100%;
+  width: @nav-width;
+  background: @uibot-blue;
+  color: @white;
+
+  :global{
+    .icon-exit {
+      font-size: 14px;
+    }
+
+    .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+      background: transparent;
+      color: @white;
+    }
+
+    .ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a {
+      color: @white;
+    }
+
+    .ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a:hover {
+      color: @white;
+    }
+
+    .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+      background-color: #1B3A99;
+      color: @white
+    }
+
+    .ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title {
+      margin-bottom: 0;
+    }
+
+    .ant-menu-item-selected {
+      background-color: #1B3A99;
+      color: @white
+    }
+
+    .ant-menu-item-selected > a {
+      color: @white !important
+    }
+
+    .ant-menu-item .ant-menu-item-selected {
+      color: @white
+    }
+
+    .ant-menu-item:hover, .ant-menu-submenu-title:hover {
+      background-color: #385BC6;
+    }
+
+    .ant-menu-vertical .ant-menu-item:not(:last-child), .ant-menu-vertical-left .ant-menu-item:not(:last-child), .ant-menu-vertical-right .ant-menu-item:not(:last-child), .ant-menu-inline .ant-menu-item:not(:last-child) {
+      margin: 0;
+    }
+
+    .ant-menu-item {
+      margin: 0;
+      opacity: .6;
+      font-weight: 600;
+    }
+
+    .ant-menu {
+      height: calc(100% - 180px);
+      overflow: auto
+    }
+
+    .ant-menu::-webkit-scrollbar {
+      width: 6px;
+      background: #1B3A99;
+      border-radius:10px;
+    }
+
+    .ant-menu::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+      background: rgba(0,0,0,0.2);
+      }
+
+    .ant-menu::-webkit-scrollbar-track  {
+      background: @uibot-blue;
+      }
+
+    .ant-menu-submenu-title {
+      font-weight: 600;
+      opacity: .6;
+    }
+
+    .ant-menu-submenu-selected .ant-menu-submenu-title,
+    .ant-menu-submenu-selected .ant-menu-item-selected,  .ant-menu-submenu-title:hover, .ant-menu-item:hover, .ant-menu-item-selected {
+      opacity: 1;
+    }
+  }
+
+  .subMenu {
+    font-weight: 400;
+    opacity: .6;
+  }
+
+  .subMenu:hover {
+    opacity: 1;
+  }
+
+  .mainMenu {
+    margin-bottom: 8px !important;
+  }
+
+  &Logo {
+    position: relative;
+    height: 108px;
+    padding: 24px;
+    overflow: hidden;
+    line-height: 64px;
+    transition: all 0.3s;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    h1 {
+      display: inline-block;
+      margin: 0 0 0 12px;
+      color: @white;
+      font-weight: 500;
+      font-size: 20px;
+      vertical-align: middle;
+      margin-left: 24px;
+    }
+  }
+  .logout {
+    position: absolute;
+    bottom: 11px;
+  }
+
+  .userInfo {
+    position: absolute;
+    bottom: 80px;
+    cursor: pointer;
+    left: 24px;
+  }
+
+  .navTitle {
+    margin-left: 12px;
+  }
+
+  .userInfo:hover {
+    color: @white;
+  }
+
+  .infoText {
+    margin-left: 10px;
+  }
+}
+
+&:global(.ant-tooltip-inner) {
+  min-height: 0;
+}
+
+

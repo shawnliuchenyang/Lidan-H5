@@ -1,0 +1,26 @@
+stages:
+  - pre-deploy
+  - deploy
+
+cache:
+  key: '$CI_COMMIT_REF_NAME'
+  paths:
+    - node_modules/
+    
+pre-deploy:
+  stage: pre-deploy
+  when: manual
+  only:
+    - pre-master
+  script:
+    - sh pre-deploy.sh
+  allow_failure: false
+
+deploy:
+  stage: deploy
+  when: manual
+  only:
+    - master
+  script:
+    - sh deploy-build.sh
+  allow_failure: false

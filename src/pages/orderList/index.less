@@ -1,0 +1,256 @@
+.ACOrderList { 
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 32px;
+  overflow: auto;
+}
+  .olForm {
+    padding: 0 140px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translateY(0);
+    transition: .5s;
+    margin-left: 0;
+    position: relative;
+
+    & * {
+      transition: .5s;
+    }
+
+    :global {
+      .ant-form-item {
+        margin-bottom: 8px;
+        flex-wrap: nowrap;
+        width: 50%;
+        min-width: 400px;
+      }
+
+      .ant-form-item-label {
+        width: 90px;
+        flex-shrink: 0;
+        &>label {
+          font-size: 12px
+        }
+      }
+      .ant-form-item-control-input-content {
+        display: flex;
+      }
+      .ant-radio-wrapper>span {
+        font-size: 12px;
+      }
+
+      .ant-form-item-control-input-content>.ant-picker-range {
+        padding: 4px 11px;
+        height: 28px;
+        width: 100%;
+      }
+
+      .ant-picker-input>input {
+        font-size: 12px;
+      }
+
+      .ant-form-item-control-input-content>.ant-input {
+        width: 100%;
+        height: 28px;
+        font-size: 12px;
+      }
+
+      .ant-form-item-explain { // 报错信息
+        position: absolute;
+        top: 32px;
+      }
+
+    }
+      div {
+        font-size: 12px;
+      }
+
+    .buttonControl {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      position: absolute;
+      right: 20px;
+      bottom: 25px;
+    }
+      button {
+        margin-top: 10px;
+        width: 90px;
+        transition: none;
+      }
+        span {
+          transition: none;
+        }
+    &.noData {
+      max-width: 1200px;
+      margin: 0 auto;
+      transform: translateY(200px);
+    }
+      .ant-form-item {
+        margin-bottom: 24px;
+      }
+    .ant-picker-input 
+      input {
+        text-align: center;
+      }
+    }
+
+  .olTabs {
+    transform: translateY(0);
+    transition: .5s;
+    opacity: 1;
+    padding: 30px 20px 0;
+
+    :global {
+      .ant-descriptions {
+        width: 100%;
+        padding-right: 120px;
+      }
+      .ant-btn-danger {
+        position: absolute;
+        right: 0px;
+        bottom: 15px;
+        width: 90px;
+      }
+      .ant-descriptions-row .ant-descriptions-item-label {
+        padding: 5px 10px;
+        font-size: 12px;
+        text-align: right;
+      }
+  
+      .ant-descriptions-row .ant-descriptions-item-content {
+        padding: 5px 10px;
+        font-size: 12px;
+        text-align: left;
+      }
+
+      .ant-tabs-content>div.ant-tabs-tabpane {
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .ant-tabs-nav {
+        padding-left: 50px;
+      }
+    }
+  
+    &>div+div {
+      margin-top: 20px;
+    }
+
+    &.noData {
+      transform: translateY(200px);
+      opacity: 0;
+    }
+
+    th {
+      padding: 12px 6px;
+      text-align: center;
+      font-size: 12px;
+    }
+    td {
+      padding: 8px 6px;
+      text-align: center;
+      font-size: 12px;
+    }
+    .jumpSpan {
+      cursor: pointer;
+      color: #1890ff;
+    }
+    .descripDiv {
+      display: flex; 
+      position: relative;
+    }
+  }
+// .ACOrderList .olForm .ant-picker,
+// .ACOrderList .olForm .ant-input 
+//   width 90%
+/* 模态框样式 */
+/* .antiCheatOrderDetailModal .ant-descriptions-row {
+  display: flex;
+} */
+.antiCheatOrderDetailModal {
+
+  :global {
+    .ant-descriptions-title {
+      margin: 16px 0;
+    }
+
+    .ant-modal-content {
+      padding: 24px;
+    }
+
+    .ant-table {
+      margin-top: 10px;
+      table {
+        thead {
+          tr {
+            th {
+              padding: 4px 8px;
+              font-size: 12px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              padding: 4px 8px;
+              line-height: 1.2;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    
+    .ant-modal-body {
+      padding: 20px 30px;
+      .ant-descriptions-title{
+        margin: 12px 0 4px 0;
+        font-size: 14px;
+      }
+    }
+  }
+  .twoLine {
+    .ant-descriptions-row {
+      .ant-descriptions-item-label {
+        width: 15%;
+      }
+      .ant-descriptions-item-content {
+        width: 35%;
+      }
+    }
+  }
+  .threeLine {
+    .ant-descriptions-row {
+      .ant-descriptions-item-label {
+        width: 16.5%;
+      }
+
+      .ant-descriptions-item-content {
+        width: 16.5%;
+      }
+    }
+  }
+}
+.antiCheatOrderDetailModal .ant-descriptions-row .ant-descriptions-item-label,
+.antiCheatOrderDetailModal .ant-descriptions-row .ant-descriptions-item-content {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.antiCheatBanDriverModal {
+  .ant-form-item-label>label {
+    font-size: 14px; 
+    width: 80px;
+    margin-left: 20px;
+    padding-left: 8px;
+    &::before {
+      position: absolute;
+      left: 0;
+    }
+  }
+}

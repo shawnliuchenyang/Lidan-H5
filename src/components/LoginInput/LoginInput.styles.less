@@ -1,0 +1,104 @@
+.empty{
+  input::placeholder{
+    color: @shadow-gray;
+  };
+
+  .tEmpty input::placeholder{
+    color: '#ff3e27'
+  };
+}
+
+.inputContainer{
+  margin-top: 10px;
+  position: relative;
+  padding-bottom: 22px;
+  :global {
+    & .ant-input, & .ant-input-password {
+      border: none;
+      border-bottom: 1px solid #d9dee2;
+      border-radius: 0;
+      padding: 12px 0;
+      color: #000;
+      background: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      height: 46px;
+    }
+    & .ant-input:placeholder-shown {
+      font-weight: normal;
+    }
+
+    & .ant-input:hover {
+      border-bottom-color: #d9dee2;
+      box-shadow: 0 0 0 30px white inset;
+    }
+
+    & .ant-input:focus {
+      border-bottom-color: #1f77f3;
+      box-shadow: 0 0 0 30px white inset, 0 1px 0 0 #1f77f3;
+    }
+
+    .ant-input-password {
+      padding: 0;
+    }
+
+    .ant-input-affix-wrapper .ant-input {
+      border-bottom: 1px solid #d9dee2;
+    }
+
+    .ant-input-password:focus {
+      border-bottom-color: #1f77f3 !important;
+      box-shadow: 0 0 0 30px white inset, 0 1px 0 0 #1f77f3;
+    }
+
+    .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+      box-shadow: none;
+    }
+  }
+}
+
+ .loginInputError {
+    color: #ff3e27;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    opacity: 0;
+  }
+
+ .loginInputError.tShow {
+    opacity: 1;
+  }
+
+ .loginInputError.tip {
+    opacity: 1;
+    color: #8e9ca8;
+  }
+
+.tError {
+  input {
+    border-bottom:1px solid #ff3e27 !important;
+    box-shadow: 0 0 0 30px white inset, 0 1px 0 0 #ff3e27;
+  }
+
+  input:focus {
+    border-bottom:1px solid #ff3e27 !important;
+    box-shadow: 0 0 0 30px white inset, 0 1px 0 0 #ff3e27;
+  }
+
+  input::placeholder{
+    color: #ff3e27
+  };
+
+  :global {
+    .ant-input-password {
+      border-bottom:1px solid #ff3e27 !important;
+      box-shadow: 0 0 0 30px white inset, 0 1px 0 0 #ff3e27;
+    }
+
+    .ant-input-password:focus {
+      border-bottom:1px solid #ff3e27 !important;
+      box-shadow: 0 0 0 30px white inset, 0 1px 0 0 #ff3e27;
+    }
+  }
+}
