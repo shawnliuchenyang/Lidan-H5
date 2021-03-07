@@ -87,6 +87,7 @@ proxy: {
     "@red":"#ff3e27",
     "@green":"#00845f"
   },
+  publicPath: '/H5/'
 }
 
 export default config;
