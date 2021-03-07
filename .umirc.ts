@@ -5,6 +5,16 @@ const config: IConfig =  {
   history: 'hash',
   routes: [
     {
+      path: '/meetingCenter',
+      title: '会议首页',
+      component: './meetingCenter',
+    },
+    {
+      path: '/meetingModule',
+      title: '会议模块',
+      component: './meetingModule',
+    },
+    {
       path: '/login',
       title: '登录页',
       component: './login',
@@ -15,7 +25,7 @@ const config: IConfig =  {
       routes: [
         {
           path: '/',
-          redirect: './login'
+          redirect: './meetingCenter',
         },
 
         { path: '/center', component: '../pages/Center', title: '会议中心', favicon: 'https://cdn.wul.ai/file-analyze/logo.png' },

@@ -17,6 +17,7 @@
     "dva": "^2.6.0-beta.6",
     "echarts": "^5.0.2",
     "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
     "moment": "^2.26.0",
     "pm2": "^4.4.0",
     "qs": "^6.9.4",
@@ -24,6 +25,7 @@
     "react": "16.13.1",
     "react-calendar": "^3.3.1",
     "react-dom": "^16.8.6",
+    "reactjs-swiper": "^0.1.0",
     "wangeditor": "^4.6.6",
     "xlsx": "^0.16.4"
   },
