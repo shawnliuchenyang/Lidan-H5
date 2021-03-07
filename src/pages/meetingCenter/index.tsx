@@ -7,12 +7,13 @@ import ReactSwiper from 'reactjs-swiper';
 import { Helmet } from "react-helmet";
 import {
   HomeOutlined,
+  CalendarOutlined,
+  EnvironmentOutlined
 } from '@ant-design/icons';
 import LO from "lodash"
 
 const MeettingCenter: FC = (props) => {
 
-  const [form] = Form.useForm();
   const [meetingInfo, setmeetingInfo] = useState([]);
   const [swiperItems, setswiperItems] = useState([]);
 
@@ -106,10 +107,46 @@ const MeettingCenter: FC = (props) => {
     </div>
   )
 
+  const renderConfig = () => {
+    const { baseInfo } = meetingInfo
+    console.log('baseInfo', baseInfo)
+    let year
+    let month
+    let day
+    if(baseInfo && baseInfo.beginTime){
+    const { beginTime, address } = baseInfo
+    var date = new Date(beginTime);
+    year = date.getFullYear()
+    month = date.getMonth()
+    day = date.getDay()
+
+    return (
+      <div className={styles.configField}>
+        <div className={styles.configItem}>
+          <CalendarOutlined className={styles.configImg} />
+          <div className={styles.configTextField}>
+            <div>日期</div>
+            <div className={styles.configDetail}>{year}年{month}月{day}日开幕</div>
+          </div>
+        </div>
+
+        <div className={styles.configAddress}>
+          <EnvironmentOutlined className={styles.configImg} />
+          <div className={styles.configTextField}>
+            <div>地址</div>
+             <div className={styles.configDetail}>{address}</div>
+          </div>
+        </div>
+      </div>
+    )
+    }
+  }
+
   const renderModules = () => {
     const expandInfo = LO.get(meetingInfo, 'expandInfo', [])
     return(
     <div className={styles.modulesField}>
+      <div className={styles.moduleTitle}>峰会信息</div>
       {
         expandInfo.map((item, index) => {
         const dataType = LO.get(item, "dataType", 1)
@@ -119,6 +156,7 @@ const MeettingCenter: FC = (props) => {
               <div className={styles.innerItem}>
               <img src={item.icon} className={styles.moduleImg}/>
               <div>{item.title}</div>
+              <div className={styles.moduleDesc}>{item.modelDesc}</div>
               </div>
             </div>
             )
@@ -129,6 +167,7 @@ const MeettingCenter: FC = (props) => {
               <div className={styles.innerItem}>
               <img src={item.icon} className={styles.moduleImg}/>
               <div>{item.title}</div>
+              <div className={styles.moduleDesc}>{item.modelDesc}</div>
               </div>
             </div>
             )
@@ -148,6 +187,7 @@ const MeettingCenter: FC = (props) => {
         <div className={styles.body}>
           {renderTitle()}
           {renderSwiper()}
+          {renderConfig()}
           {renderModules()}
         </div>
         {/* {renderFooter()} */}
